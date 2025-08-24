@@ -28,51 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCashier = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.listCashierQueue = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
-            // btnCashier
+            // btnRefresh
             // 
-            this.btnCashier.Font = new System.Drawing.Font("Fredoka", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCashier.Location = new System.Drawing.Point(24, 23);
-            this.btnCashier.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCashier.Name = "btnCashier";
-            this.btnCashier.Size = new System.Drawing.Size(168, 49);
-            this.btnCashier.TabIndex = 2;
-            this.btnCashier.Text = "Refresh";
-            this.btnCashier.UseVisualStyleBackColor = true;
+            this.btnRefresh.Font = new System.Drawing.Font("Fredoka", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Location = new System.Drawing.Point(24, 23);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(168, 49);
+            this.btnRefresh.TabIndex = 2;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click_1);
             // 
-            // listView1
+            // btnNext
             // 
-            this.listView1.Font = new System.Drawing.Font("Fredoka", 15.75F);
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(206, 23);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(259, 394);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.btnNext.Font = new System.Drawing.Font("Fredoka", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.Location = new System.Drawing.Point(24, 80);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(168, 49);
+            this.btnNext.TabIndex = 5;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // button1
+            // listCashierQueue
             // 
-            this.button1.Font = new System.Drawing.Font("Fredoka", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(24, 80);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(168, 49);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Next";
-            this.button1.UseVisualStyleBackColor = true;
+            this.listCashierQueue.Font = new System.Drawing.Font("Fredoka", 15.75F);
+            this.listCashierQueue.HideSelection = false;
+            this.listCashierQueue.Location = new System.Drawing.Point(206, 23);
+            this.listCashierQueue.Name = "listCashierQueue";
+            this.listCashierQueue.Size = new System.Drawing.Size(259, 389);
+            this.listCashierQueue.TabIndex = 6;
+            this.listCashierQueue.UseCompatibleStateImageBehavior = false;
+            this.listCashierQueue.View = System.Windows.Forms.View.SmallIcon;
             // 
             // CashierWindowQueue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.ClientSize = new System.Drawing.Size(489, 438);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.btnCashier);
+            this.Controls.Add(this.listCashierQueue);
+            this.Controls.Add(this.btnNext);
+            this.Controls.Add(this.btnRefresh);
             this.Name = "CashierWindowQueue";
             this.Text = "CashierWindowQueue";
             this.ResumeLayout(false);
@@ -80,8 +84,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnCashier;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.ListView listCashierQueue;
     }
 }
